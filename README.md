@@ -2,31 +2,19 @@
 
 ## Before you use
 1. Enter your API key and you LLM provider's base url in `x_run.py` or `x_run_baseline.py`.
-2. All benchmarks are in `X-benchmarks` folder, separated by domains.
 
 ## Evaluation
 1. Use command line instructions to run the evaluations. See `run.sh` for examples.
 2. The results will be saved in the current folder, with `save_name` as prefix of the file name. Each task include two files: `response.jsonl` and `accuracy.jsonl`, the first one includes LLM's response for each data entry, the second one includes the accuracy for the evalution.
 
 ## Repository Structure
-├── ACPBench-Benchmark/        # ACPBench Benchmark 
-├── ARB-Benchmark/             # ActionReasoningBench Benchmark
-├── TRAC-Benchmark/            # TRAC Benchmark
-├── ACP_Prompt.py              # All prompts used ACPBench
-├── ACP_run.py                 # ProRAC evaluation for ACPBench
-├── ACP_run_baseline.py        # Baseline evaluation for ACPBench
-├── ACP_utils.py               # Utility functions for ACPBench
-├── ARB_Prompt.py              # Prompt templates for ARB domain
-├── ARB_run.py                 # ProRAC evaluation for ARB
-├── ARB_run_baseline.py        # Baseline evaluation for ARB
-├── ARB_utils.py               # Utility functions for ARB
-├── TRAC_Prompt.py             # Prompt templates for TRAC domain
-├── TRAC_run.py                # ProRAC evaluation for TRAC
-├── TRAC_run_baseline.py       # Baseline evaluation for TRAC
-├── TRAC_utils.py              # Utility functions for TRAC
-├── utils.py                   # Shared utility functions
-├── run.sh                     # Command line instructions examples 
-└── README.md                  # Project documentation
+- `X-Benchmark` folders contains all benchmarks, separated by domains.
+- `X_Prompt.py` contains all prompts used in the project.
+- `X_run.py` is used to evaluate ProRAC on a specific benchmark.
+- `X_run_baseline.py` is used to evaluate baselines on a specific benchmark.
+- `X_utils.py` contains all utility functions used in the project.
+- `utils.py` contains shared utility functions.
+- `run.sh` contains command line instructions examples.
 
 ## X_utils.py
 Some parameters used in functions
